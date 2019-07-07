@@ -1,0 +1,23 @@
+<div class="media" *ngIf="employee != null">
+    <img src="../../assets/images/emp.png" width="10%" height="10%">
+    <div class="media-body">
+        <table class="table table-responsive">
+            <tr>
+                <th>Employee Id</th>
+                <td>{{employee.empId}}</td>
+            </tr>
+            <tr>
+                <th>Employee Name</th>
+                <td>{{employee.name}}</td>
+            </tr>
+            <tr>
+                <th>Salary</th>
+                <td>{{employee.salary}}</td>
+            </tr>
+            <tr>
+                <th>Date Of Joining</th>
+                <td>{{employee.hireDate}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

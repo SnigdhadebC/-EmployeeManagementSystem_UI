@@ -1,0 +1,25 @@
+<span class="error">{{errorMessage}}</span>
+<div class="card" *ngIf='employees != null && employees.length > 0'>
+    <div class="card-body">
+        <div>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Employee Id <button class="btn btn-outline-primary" (click)="sortBy('empId')">Sort</button></th>
+                        <th>Employee Name <button class="btn btn-outline-primary" (click)="sortBy('name')">Sort</button></th>
+                        <th>Salary <button class="btn btn-outline-primary" (click)="sortBy('salary')">Sort</button></th>
+                        <th>Date of Joining <button class="btn btn-outline-primary" (click)="sortBy('hireDate')">Sort</button></th>
+                    </tr>                   
+                </thead>
+                <tbody>
+                    <tr *ngFor='let employee of employees'>
+                        <td><button class="btn btn-secondary" (click)="navigateTo(employee)">{{employee.empId}}</button></td>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.salary}}</td>
+                        <td>{{employee.hireDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
